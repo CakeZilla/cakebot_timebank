@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>ลงทะเบียนธนาคารเวลา</title>
+    <style>
+        * {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <center>
+                    <img id="profilepic" style="width:150px" />
+                </center>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                <input type="hidden" id="userId">
+                ชื่อแสดง : <br>
+                <input type="text" id="displayname" style="width:100%">
+                เบอร์โทร : <br>
+                <input type="tel" id="tel" style="width:100%">
+                ปีเกิด : <br>
+                <select id="birthyear" style="width:100%">
+                    <option value="2563">2563</option>
+                    <option value="2562">2562</option>
+                    <option value="2561">2561</option>
+                    <option value="2561">2561</option>
+                    <option value="2560">2560</option>
+                    <option value="2559">2559</option>
+                    <option value="2558">2558</option>
+                    <option value="2557">2557</option>
+                    <option value="2556">2556</option>
+                    <option value="2555">2555</option>
+                    <option value="2554">2554</option>
+                    <option value="2553">2553</option>
+                    <option value="2552">2552</option>
+                    <option value="2551">2551</option>
+                    <option value="2550">2550</option>
+                    <option value="2549">2549</option>
+                    <option value="2548">2548</option>
+                    <option value="2547">2547</option>
+                    <option value="2546">2546</option>
+                    <option value="2545">2545</option>
+                    <option value="2544">2544</option>
+                    <option value="2543">2543</option>
+                    <option value="2542">2542</option>
+                    <option value="2541">2541</option>
+                    <option value="2540">2540</option>
+                    <option value="2539">2539</option>
+                    <option value="2538">2538</option>
+                    <option value="2537">2537</option>
+                    <option value="2536">2536</option>
+                    <option value="2535">2535</option>
+                    <option value="2534">2534</option>
+                    <option value="2533">2533</option>
+                    <option value="2532">2532</option>
+                    <option value="2531">2531</option>
+                    <option value="2530">2530</option>
+                    <option value="2529">2529</option>
+                    <option value="2528">2528</option>
+                    <option value="2527">2527</option>
+                    <option value="2526">2526</option>
+                    <option value="2525">2525</option>
+                    <option value="2524">2524</option>
+                    <option value="2523">2523</option>
+                    <option value="2522">2522</option>
+                    <option value="2521">2521</option>
+                    <option value="2520">2520</option>
+                    <option value="2519">2519</option>
+                    <option value="2518">2518</option>
+                    <option value="2517">2517</option>
+                    <option value="2516">2516</option>
+                    <option value="2515">2515</option>
+                    <option value="2514">2514</option>
+                    <option value="2513">2513</option>
+                    <option value="2512">2512</option>
+                    <option value="2511">2511</option>
+                    <option value="2510">2510</option>
+                    <option value="2509">2509</option>
+                    <option value="2508">2508</option>
+                    <option value="2507">2507</option>
+                    <option value="2506">2506</option>
+                    <option value="2505">2505</option>
+                    <option value="2504">2504</option>
+                    <option value="2503">2503</option>
+                    <option value="2502">2502</option>
+                    <option value="2501">2501</option>
+                    <option value="2500">2500</option>
+                    <option value="2499">2499</option>
+                    <option value="2498">2498</option>
+                    <option value="2497">2497</option>
+                    <option value="2496">2496</option>
+                    <option value="2495">2495</option>
+                    <option value="2494">2494</option>
+                    <option value="2493">2493</option>
+                    <option value="2492">2492</option>
+                    <option value="2491">2491</option>
+                    <option value="2490">2490</option>
+                    <option value="2489">2489</option>
+                    <option value="2488">2488</option>
+                    <option value="2487">2487</option>
+                    <option value="2486">2486</option>
+                    <option value="2485">2485</option>
+                    <option value="2484">2484</option>
+                    <option value="2483">2483</option>
+                    <option value="2482">2482</option>
+                    <option value="2481">2481</option>
+                    <option value="2480">2480</option>
+                </select>
+                เดือนเกิด : <br>
+                <select id="birthmonth" style="width:100%">
+                    <option value="มกราคม">มกราคม</option>
+                    <option value="กุมภาพันธ์">กุมภาพันธ์</option>
+                    <option value="มีนาคม">มีนาคม</option>
+                    <option value="เมษายน">เมษายน</option>
+                    <option value="พฤษภาคม">พฤษภาคม</option>
+                    <option value="มิถุนายน">มิถุนายน</option>
+                    <option value="กรกฎาคม">กรกฎาคม</option>
+                    <option value="สิงหาคม">สิงหาคม</option>
+                    <option value="กันยายน">กันยายน</option>
+                    <option value="ตุลาคม">ตุลาคม</option>
+                    <option value="พฤศจิกายน">พฤศจิกายน</option>
+                    <option value="ธันวาคม">ธันวาคม</option>
+                </select>
+                <!-- </div> -->
+
+                <!-- <div class="row"> -->
+<br><br>
+                <center>
+                    <button id="save" class="btn btn-success  btn-lg  btn-block">ลงทะเบียน</button>
+                </center>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>
+
+<script>
+    function initializeLiff(myLiffId) {
+        liff
+            .init({
+                liffId: myLiffId
+            })
+            .then(() => {
+                initializeApp();
+            })
+            .catch(err => {});
+    }
+    initializeLiff("1654273182-bYzwvAmq");
+
+    function initializeApp(x) {
+        liff.getProfile().then(data => {
+            $("#profilepic").attr("src", data.pictureUrl);
+            $("#displayname").val(data.displayName)
+            $("#userId").val(data.userId)
+            // alert(data.userId);
+        });
+    }
+</script>
+
+</html>
